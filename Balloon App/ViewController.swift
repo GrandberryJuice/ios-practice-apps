@@ -10,6 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var redballoon: UIImageView!
+    
+    @IBOutlet var blueballoon: UIImageView!
+    
+    @IBOutlet var hideRed: UIButton!
+    @IBOutlet var hideBlue: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +28,12 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func HideRedFunc(sender: AnyObject) {
+        redballoon.hidden = true
+    }
 
+    @IBAction func HideBlueFunc(sender: AnyObject) {
+        blueballoon.hidden = true
+    }
 }
 
