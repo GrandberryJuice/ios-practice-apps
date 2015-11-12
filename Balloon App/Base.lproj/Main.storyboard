@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Balloon_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AdR-tS-wfd">
+                                <rect key="frame" x="129" y="354" width="117" height="30"/>
+                                <state key="normal" title="Hide Red Balloon"/>
+                                <connections>
+                                    <action selector="HideRedFunc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="npR-JE-af9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hua-Av-p45">
+                                <rect key="frame" x="133" y="426" width="122" height="30"/>
+                                <state key="normal" title="Hide Blue Balloon"/>
+                                <connections>
+                                    <action selector="HideBlueFunc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="44u-WA-bbL"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="red-balloon" translatesAutoresizingMaskIntoConstraints="NO" id="OJi-LW-ZxO">
+                                <rect key="frame" x="6" y="33" width="122" height="115"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blue-balloon" translatesAutoresizingMaskIntoConstraints="NO" id="Otc-OK-b3L">
+                                <rect key="frame" x="208" y="33" width="125" height="115"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="blueballoon" destination="Otc-OK-b3L" id="wn8-UA-C8r"/>
+                        <outlet property="hideBlue" destination="Hua-Av-p45" id="ttw-6m-edN"/>
+                        <outlet property="hideRed" destination="AdR-tS-wfd" id="Xwi-t9-TWz"/>
+                        <outlet property="redballoon" destination="OJi-LW-ZxO" id="JxZ-bd-WKF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="244.5" y="304.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="blue-balloon" width="360" height="590"/>
+        <image name="red-balloon" width="167" height="400"/>
+    </resources>
+</document>
