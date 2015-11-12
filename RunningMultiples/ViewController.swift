@@ -9,17 +9,68 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    //global variable
+    var counter:Int = 0
+    var number:Int! = 0
+    //outlets
+    @IBOutlet weak var multiplesLabel: UILabel!
+    @IBOutlet weak var multiplesTxt: UITextField!
+    @IBOutlet weak var playBtn: UIButton!
+    @IBOutlet weak var multipleTitle: UIImageView!
+    @IBOutlet weak var addBtn: UIButton!
+ 
+    
+    func multipleOver() -> Bool{
+        if counter  >= number{
+            return true
+        } else {
+            return false
+            
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    
+    @IBAction func PlayBtnClick(sender: AnyObject) {
+        
+        if (multiplesTxt.text != nil && multiplesTxt.text != "") {
+            //hidden items
+            multipleTitle.hidden = true
+            multiplesTxt.hidden = true
+            playBtn.hidden = true
+            
+            //unhide labels & buttons
+            multiplesLabel.hidden = false
+            addBtn.hidden = false
+            counter = 0
+        }
     }
-
-
+    
+    @IBAction func addMultiples(sender: AnyObject) {
+         counter++
+        number = Int(multiplesTxt.text!)
+        var numHolder = counter * number
+        multiplesLabel.text = String("\(number!) + \(counter) = \(numHolder)")
+       
+        //multipleOver has to be before addMultiples
+        if multipleOver() {
+            restartApp()
+        }
+    }
+    
+    
+    func restartApp() {
+        //hidden items
+        multipleTitle.hidden = false
+        multiplesTxt.hidden = false
+        playBtn.hidden = false
+        
+        //unhide labels & buttons
+        multiplesLabel.hidden = true
+        addBtn.hidden = true
+        
+    }
 }
+
+
+
 
