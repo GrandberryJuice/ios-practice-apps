@@ -1,2 +1,2 @@
 # ios-practice-apps
-This is the first app built
+These are some simple ios apps that were built using swift. 
